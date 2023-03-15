@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Счетчик пассажиров</string>
+    <string name="reset_button">Сброс</string>
+    <string name="free">Все места свободны</string>
+    <string name="busy">Осталось мест: </string>
+    <string name="too_much">Пассажиров слишком много!</string>
+    <string name="plus_button">+</string>
+    <string name="minus_button">-</string>
+</resources>

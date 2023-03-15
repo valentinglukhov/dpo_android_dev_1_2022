@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:padding="30dp"
+        android:text="@string/reset_button"
+        android:visibility="invisible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textColor="#03BA22"
+        android:maxLines="2"
+        android:textSize="20sp"
+        android:id="@+id/stateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal"
+        android:text="@string/free" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="#B2B2B2"
+        android:textSize="40sp"
+        android:id="@+id/plusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:padding="20dp"
+        android:text="@string/plus_button"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:enabled="false"
+        android:alpha="0.3"
+        android:background="#B2B2B2"
+        android:textSize="40sp"
+        android:id="@+id/minusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:padding="20dp"
+        android:text="@string/minus_button"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:maxLines="2"
+        android:textSize="70sp"
+        android:id="@+id/passengerCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text="0" />
+    
+</FrameLayout>
+
