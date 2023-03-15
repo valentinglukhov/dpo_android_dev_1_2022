@@ -55,7 +55,8 @@ class MainActivity : AppCompatActivity() {
                 binding.resetButton.visibility = View.INVISIBLE
             }
             in 1..49 -> {
-                binding.stateInfo.text = "Осталось мест: ${50 - counter}"
+                binding.stateInfo.text = getString(R.string.busy, "${50 - counter}")
+//                binding.stateInfo.text = "Осталось мест: ${50 - counter}"
                 binding.stateInfo.setTextColor(Color.parseColor("#3F45F0"))
                 binding.minusButton.isEnabled = true
                 binding.minusButton.alpha = 1F
