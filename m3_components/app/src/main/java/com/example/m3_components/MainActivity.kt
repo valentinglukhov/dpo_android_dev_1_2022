@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
                 sliderBar.isEnabled = true
                 Toast.makeText(this@MainActivity, "Таймер завершен", Toast.LENGTH_SHORT).show()
                 cancel()
+                TimerState.Stopped().action()
 //                job = null
             }
         } else {
