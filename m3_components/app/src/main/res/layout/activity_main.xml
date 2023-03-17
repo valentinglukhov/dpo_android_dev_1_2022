@@ -57,7 +57,8 @@
         app:layout_constraintVertical_bias="0.39999998" />
 
     <Button
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        style="?attr/materialButtonOutlinedStyle"
+        app:strokeWidth="3dp"
         android:id="@+id/actionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
