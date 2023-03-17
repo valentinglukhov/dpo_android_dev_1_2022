@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
 //                job = null
             }
         } else {
+            TimerState.Stopped().action()
             job?.cancel()
             isRunning = false
             timerNumber.text = sliderBar.value.toInt().toString()
@@ -72,11 +73,15 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "Таймер остановлен", Toast.LENGTH_SHORT).show()
         }
     }
+
+    sealed class TimerState : AppCompatActivity() {
+        class Stopped : TimerState()
+        class Running : TimerState()
+        class Finished : TimerState()
+
+        fun action () {
+        }
+    }
 }
 
-sealed class TimerState {
-    class Stopped : TimerState()
-    class Running : TimerState()
-    class Finished : TimerState()
-}
 
