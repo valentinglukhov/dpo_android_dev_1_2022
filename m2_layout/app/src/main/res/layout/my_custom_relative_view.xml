@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/blackBox"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/black"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/topString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/blackBox"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="16dp"
+        android:text="Верхняя строка" />
+
+    <TextView
+        android:id="@+id/bottomString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topString"
+        android:layout_toRightOf="@+id/blackBox"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="16dp"
+        android:text="Нижняя строка" />
+
+    <FrameLayout
+        android:id="@+id/greyBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blackBox"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        android:padding="16dp" />
+
+</RelativeLayout>
