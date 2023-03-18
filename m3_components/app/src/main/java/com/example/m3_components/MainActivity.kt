@@ -29,9 +29,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.actionButton.setOnClickListener {
+            getTimerNumber()
             actionTimer(countNumber)
         }
     }
+
+    private fun getTimerNumber() = findViewById<TextView>(R.id.timerNumber)
 
 
     private fun actionTimer(countNumber: Int) {
@@ -39,10 +42,6 @@ class MainActivity : AppCompatActivity() {
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         val sliderBar = findViewById<Slider>(R.id.sliderBar)
         val actionButton = findViewById<Button>(R.id.actionButton)
-//        if (job?.isActive == true) {
-//            job?.cancel()
-//            job = null
-//        }
         if (!isRunning) {
             isRunning = true
             actionButton.setText(R.string.stop_timer)
@@ -60,11 +59,8 @@ class MainActivity : AppCompatActivity() {
                 sliderBar.isEnabled = true
                 Toast.makeText(this@MainActivity, "Таймер завершен", Toast.LENGTH_SHORT).show()
                 cancel()
-                TimerState.Stopped().action()
-//                job = null
             }
         } else {
-            TimerState.Stopped().action()
             job?.cancel()
             isRunning = false
             timerNumber.text = sliderBar.value.toInt().toString()
@@ -75,12 +71,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    sealed class TimerState : AppCompatActivity() {
+
+    sealed class TimerState {
         class Stopped : TimerState()
         class Running : TimerState()
         class Finished : TimerState()
 
-        fun action () {
+        fun action (action: TimerState) {
+            when(action) {
+                is Stopped -> {
+
+                }
+
+                else -> {}
+            }
         }
     }
 }
