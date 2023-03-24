@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_button_skip">Продолжить</string>
+    <string name="welcome_message">Приветствуем тебя в приложении QUIZ-опросник СкиллБокс!</string>
+</resources>
