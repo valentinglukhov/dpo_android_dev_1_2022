@@ -50,7 +50,7 @@
         <action
             android:id="@+id/action_resultsFragment_to_quizFragment"
             app:destination="@id/quizFragment"
-            app:popUpTo="@id/quizFragment"
-            app:popUpToInclusive="true" />
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="false" />
     </fragment>
 </navigation>
