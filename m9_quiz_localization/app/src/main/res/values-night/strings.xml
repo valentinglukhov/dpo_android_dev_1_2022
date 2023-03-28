@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_button_skip">Continue</string>
+    <string name="welcome_message">Приветствуем тебя в приложении QUIZ-опросник SkillBox!</string>
+    <string name="back_button_text">Назад</string>
+    <string name="send_button_text">Отправить</string>
+    <string name="again_button_text">Начать заново</string>
+    <string name="begin_button_text">Начать</string>
+    <string name="pick_date">Выбрать дату</string>
+    <string name="choose_your_birthday">Choose your birthday</string>
+    <string name="please_answer_all_questions">Please answer all questions =)</string>
+</resources>

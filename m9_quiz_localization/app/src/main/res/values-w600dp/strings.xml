@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_message">Welcome to the SkillBox QUIZ questionnaire!</string>
+    <string name="back_button_text">Back</string>
+    <string name="send_button_text">Send</string>
+    <string name="again_button_text">Start again</string>
+    <string name="begin_button_text">Begin</string>
+    <string name="pick_date">Select date</string>
+    <string name="choose_your_birthday">Choose your birthday</string>
+    <string name="please_answer_all_questions">Please answer all questions =)</string>
+</resources>

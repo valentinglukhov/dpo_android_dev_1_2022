@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">QUIZ-questionnaire SkillBox</string>
+    <string name="welcome_button_skip" tools:ignore="MissingTranslation">Continue</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="welcome_message" tools:ignore="MissingTranslation">Welcome to the SkillBox QUIZ questionnaire!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="back_button_text" tools:ignore="MissingTranslation">Back</string>
+    <string name="send_button_text" tools:ignore="MissingTranslation">Send</string>
+    <string name="again_button_text" tools:ignore="MissingTranslation">Start again</string>
+    <string name="begin_button_text" tools:ignore="MissingTranslation">Begin</string>
+    <string name="pick_date" tools:ignore="MissingTranslation">Select date</string>
+    <string name="choose_your_birthday">Choose your birthday</string>
+    <string name="please_answer_all_questions">Please answer all questions =)</string>
+</resources>
