@@ -12,8 +12,6 @@ import java.util.*
 class WelcomeActivity : AppCompatActivity() {
     val calendar = Calendar.getInstance()
     val dateFormat = SimpleDateFormat("dd.MM.yyyy")
-    val locale = Locale.getDefault()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
