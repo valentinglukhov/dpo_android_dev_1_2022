@@ -1,51 +1,51 @@
 package com.example.m3_components
 
-import android.content.res.Configuration
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.m3_components.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
+import java.util.Calendar
 
 private const val TAG = "MainActivity"
 const val TIMER_PROGRESS = "timerProgress"
 class MainActivity : AppCompatActivity() {
     private var countNumber = 10
     private var job: Job? = null
-    var isRunning = false
+    private var isRunning = false
     private lateinit var binding: ActivityMainBinding
-    var timerValue: Int = 7
+    private var timerValue: Int? = null
+    private var timeInMillis: Int? = null
+    private val calendar = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "onCreate")
-        savedInstanceState?.let {
-            val timerText = it.getString(TIMER_PROGRESS)
-            Toast.makeText(this, "$timerText", Toast.LENGTH_SHORT).show()
-        }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        savedInstanceState?.let {
+            timerValue = it.getInt(TIMER_PROGRESS)
+            Toast.makeText(this, "$timerValue", Toast.LENGTH_SHORT).show()
+            if (timerValue != null) {
+                isRunning = false
+                updateUI(TimerState.Idle())
+                actionTimer(timerValue!!)
+                timerValue = null
+            }
+        }
 
         binding.sliderBar.addOnChangeListener { _, _, _ -> updateUI(TimerState.Idle()) }
 
         binding.actionButton.setOnClickListener {
+            calendar.timeInMillis
             actionTimer(countNumber)
         }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        outState.putString(TIMER_PROGRESS, "Привет")
-        Log.d(TAG, "onSaveInstance")
+        job?.cancel()
+        if (timerValue != null) outState.putInt(TIMER_PROGRESS, timerValue!!)
         super.onSaveInstanceState(outState)
     }
-
-//    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-//        outState.putString(TIMER_PROGRESS, "Привет")
-//        Log.d(TAG, "onSaveInstance")
-//        super.onSaveInstanceState(outState, outPersistentState)
-//    }
 
     private fun updateUI(state: TimerState, timerValue: Int? = null) {
         when (state) {
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
                 for (timerValue in countNumber downTo 1) {
                     updateUI(TimerState.UpdateProgress(), timerValue)
                     delay(1000)
-                    this@MainActivity.timerValue = counter--
+                    this@MainActivity.timerValue = timerValue
                 }
                 updateUI(TimerState.Finish())
                 cancel()
