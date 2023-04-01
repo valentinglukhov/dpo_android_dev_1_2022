@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">m11_timer_data_storage</string>
+    <string name="edit_text_text"></string>
+    <string name="reset_button_text">Очистить</string>
+    <string name="save_button_text">Сохранить</string>
+    <string name="text_view_text">Здесь отобразится сохраненный текст</string>
+</resources>
