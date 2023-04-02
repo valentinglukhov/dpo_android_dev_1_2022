@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">m12_mvvm</string>
+    <string name="search_field_hint">Введите поисковый запрос</string>
+    <string name="search_button_text">Найти</string>
+    <string name="text_view_hint">Здесь будет отображаться результат запроса</string>
+    <string name="search_result">По запросу %s ничего не найдено</string>
+</resources>
