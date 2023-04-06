@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">m14_retrofit</string>
+    <string name="refresh_button_text">Обновить</string>
+    <string name="user_name">%1$s %2$s</string>
+</resources>
