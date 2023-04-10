@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Room</string>
+    <string name="edit_text_hint">Введите слово</string>
+    <string name="add_button_text">Добавить</string>
+    <string name="clear_button_text">Очистить</string>
+    <string name="regex_toast_message">Слово может содержать только буквы и тире =)</string>
+</resources>
