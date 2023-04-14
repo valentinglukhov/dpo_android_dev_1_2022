@@ -7,6 +7,7 @@ class MainViewModel(
     private val repository: Repository
 ) : ViewModel() {
 
+
     fun getList(): Flow<List<Word>> {
         return repository.wordsDb.getList()
     }
