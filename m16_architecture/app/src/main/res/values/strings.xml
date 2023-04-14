@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">m16_architecture</string>
+    <string name="refresh_button_text">Обновить</string>
+    <string name="useful_activity_text">Useful activity will be here</string>
+</resources>
