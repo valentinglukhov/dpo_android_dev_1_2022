@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import com.example.m16_architecture.data.State
 import com.example.m16_architecture.databinding.FragmentMainBinding
 import com.example.m16_architecture.di.DaggerAppComponent
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class MainFragment : Fragment() {
@@ -33,9 +35,13 @@ class MainFragment : Fragment() {
 
         binding.refreshButton.setOnClickListener {
             viewLifecycleOwner.lifecycleScope.launch {
-                viewModel.reloadUsefulActivity().collect {
-                    Log.d("Fun:", (it == null).toString())
-                    binding.usefulActivity.text = it.activity
+                viewModel.reloadUsefulActivity()
+                viewModel.activityFlow.collect {state ->
+                    when(state) {
+                        is State.Failure -> binding.usefulActivity.text = state.value
+                        is State.Success -> binding.usefulActivity.text = state.value
+                        null -> ""
+                    }
                 }
             }
         }
