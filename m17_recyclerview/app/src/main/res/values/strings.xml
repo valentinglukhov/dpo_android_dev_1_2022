@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">m17_recyclerview</string>
+    <string name="sol">Sol: %1$d</string>
+    <string name="rover">Rover: %1$s</string>
+    <string name="earth_date">Date: %1$s</string>
+    <string name="camera">Camera: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
