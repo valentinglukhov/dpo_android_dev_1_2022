@@ -20,7 +20,6 @@ class Repository(applicationContext: Context?) {
         .build()
 
     val getMarsPhotos: MarsPhotosApi = retrofit.create(MarsPhotosApi::class.java)
-
 }
 
 interface MarsPhotosApi {

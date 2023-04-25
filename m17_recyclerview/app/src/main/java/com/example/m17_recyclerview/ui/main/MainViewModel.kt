@@ -28,5 +28,4 @@ class MainViewModel(val repository: Repository) : ViewModel() {
             )
         }
     }
-
 }

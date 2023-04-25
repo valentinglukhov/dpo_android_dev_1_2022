@@ -55,7 +55,6 @@ class MainFragment : Fragment() {
             viewModel.photosStateFlow.collect { results ->
                 Log.d("Fragment", (results == null).toString())
                 if (results != null) photoAdapter.setData(results)
-                binding.photoRV.adapter = photoAdapter
             }
         }
         viewLifecycleOwner.lifecycleScope.launch {
