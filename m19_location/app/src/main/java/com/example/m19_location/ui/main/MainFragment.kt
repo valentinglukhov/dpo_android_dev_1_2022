@@ -50,8 +50,6 @@ class MainFragment : Fragment() {
     )
 
     private var isDescriptionOpened = false
-    private var xid: String = ""
-    private var name: String = ""
     private var fromState = false
 
     private val pointTapListener = MapObjectTapListener { mapObject, _ ->
