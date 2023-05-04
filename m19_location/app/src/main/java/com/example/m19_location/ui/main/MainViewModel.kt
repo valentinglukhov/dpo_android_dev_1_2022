@@ -46,7 +46,7 @@ class MainViewModel(context: Context, val repository: Repository) : ViewModel() 
     fun getSightFlow(point: Point) {
         viewModelScope.launch(Dispatchers.IO) {
             kotlin.runCatching {
-                repository.getMarsPhotos.getPhotos(
+                repository.getSightsList.getSights(
                     1000,
                     point.longitude, point.latitude, 50, API_KEY
                 )

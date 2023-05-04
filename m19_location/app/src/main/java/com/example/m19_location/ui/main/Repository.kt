@@ -1,6 +1,5 @@
 package com.example.m19_location.ui.main
 
-import android.content.Context
 import com.squareup.moshi.Moshi
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -10,7 +9,7 @@ import retrofit2.http.Query
 
 private const val BASE_URL = "https://api.opentripmap.com/0.1/ru/places/"
 
-class Repository(applicationContext: Context?) {
+class Repository() {
 
     private val moshi =
         Moshi.Builder().addLast(com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory())
@@ -20,14 +19,14 @@ class Repository(applicationContext: Context?) {
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 
-    val getMarsPhotos: sightApi = retrofit.create(sightApi::class.java)
+    val getSightsList: sightApi = retrofit.create(sightApi::class.java)
 
 
 }
 
 interface sightApi {
     @GET("radius")
-    suspend fun getPhotos(
+    suspend fun getSights(
         @Query("radius") radius: Int,
         @Query("lon") lon: Double,
         @Query("lat") lat: Double,

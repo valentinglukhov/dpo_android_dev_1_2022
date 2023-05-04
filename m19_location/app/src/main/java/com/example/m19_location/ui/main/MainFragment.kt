@@ -2,14 +2,12 @@ package com.example.m19_location.ui.main
 
 import android.animation.AnimatorInflater
 import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -84,7 +82,7 @@ class MainFragment : Fragment() {
                 if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
                     return MainViewModel(
                         requireContext(),
-                        Repository(context?.applicationContext)
+                        Repository()
                     ) as T
                 } else {
                     throw IllegalArgumentException("")
