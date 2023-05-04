@@ -232,8 +232,8 @@ class MainFragment : Fragment() {
         return binding.root
     }
 
-    private fun addMarker(sight: Sight) {
-        sight.features.forEach { sight ->
+    private fun addMarker(sights: Sight) {
+        sights.features.forEach { sight ->
             val marker = mapObjects.addPlacemark(
                 Point(sight.geometry.coordinates.get(1), sight.geometry.coordinates.get(0))
             ).also {
