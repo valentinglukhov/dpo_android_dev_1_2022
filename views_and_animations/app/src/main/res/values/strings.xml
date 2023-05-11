@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">views_and_animations</string>
+    <string name="start" tools:ignore="ExtraTranslation">Старт</string>
+    <string name="stop" tools:ignore="ExtraTranslation">Стоп</string>
+    <string name="reset">Сброс</string>
+    <string name="clockValue">Здесь будет время</string>
+</resources>
