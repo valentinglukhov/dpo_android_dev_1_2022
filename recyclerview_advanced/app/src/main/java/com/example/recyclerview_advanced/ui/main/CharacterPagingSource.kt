@@ -18,7 +18,6 @@ class CharacterPagingSource : PagingSource<Int, Character>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Character> {
         val pageNumber = params.key ?: 1
-        val pageSize = params.loadSize
 
         return try {
             response = repository.getCharacterListFun(pageNumber)
