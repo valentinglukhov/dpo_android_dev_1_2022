@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">recyclerview_advanced</string>
+    <string name="reload">Перезагрузить</string>
+    <string name="name">Name:\n%1$s</string>
+    <string name="status_and_species">Status and species:\n%1$s</string>
+    <string name="last_known_location">Last known location:\n%1$s</string>
+</resources>
