@@ -26,7 +26,7 @@ class CharacterPagingSource : PagingSource<Int, Character>() {
                 val prevPageNumber = if (pageNumber > 1) pageNumber - 1 else null
                 LoadResult.Page(characters, prevPageNumber, nextPageNumber)
             } else {
-                LoadResult.Error(Exception(response.message().toString()))
+                LoadResult.Error(HttpException(response))
             }
         } catch (e: Exception) {
             LoadResult.Error(e)
